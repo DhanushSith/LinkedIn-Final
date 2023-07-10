@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login-page</title>
+
+<style>
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+body{
+	padding:0px 20px ;
+    margin:20px auto;
+	text-align:left;
+	font-family:'Poppins', sans-serif;
+	
+}
+
+#fulldiv{
+	margin:60px auto;
+	width:330px;
+	box-shadow:0px 0px 5px 5px #ebe5e5d1;
+	padding:25px;
+	border-radius:5px;
+	background:white;
+}
+h1{
+    font-size:30px;
+	padding-bottom:10px;
+	font-weight:600;
+}
+.world{
+	padding-bottom:20px;
+	font-size:12px;
+	font-weight:600;
+	color:#575757;
+}
+
+.passwordboxin{
+	font-size:16px;
+	padding:15px;
+	width:100%;
+	border:2px solid lightgray;
+	margin-bottom:20px;
+	border-radius:5px;
+	position:relative;
+	font-weight:500;
+}
+.passwordbox{
+	
+}
+.but1{
+	color:#1064be;
+	margin-bottom:20px;
+	background-color:white;
+	border:none;
+	font-weight:600;
+	padding-bottom:5px;
+}
+#but2{
+	width:100%;
+	height:50px;
+	border-radius:50px;
+	background-color:#1064be;
+	color:white;
+	border:none;
+	font-weight:600;
+}
+h4{
+	text-align:center;
+	padding:20px;
+}
+#but3{
+	width:100%;
+	height:40px;
+	border-radius:50px;
+	background-color:white;
+	border:1px solid gray;
+	color:#888888;
+	font-weight:600;
+}
+.span11{
+	position:relative;
+}
+.span1{
+	color:#1064be;
+	position:absolute;
+	top:18px;
+	right:13px;
+	tranform:translate(-50% , -50%);
+	font-size:14px;	
+	font-weight:600;
+}
+.or{
+	position:relative;
+	padding:10px 0px;
+}
+.div{
+	height:1px;
+	background-color:#ccc;
+	margin:10px 0px;
+}
+
+.span{
+	font-size:14px;
+	position:absolute;
+	top:20%;
+	left:43%;
+	tranform:translate(-50% , -50%);
+	background-color:white;
+	display:block;
+	padding:5px 10px;
+	color:#999;
+}
+
+.invalid-input{
+	display:block !important;
+}
+.error-msg{
+	color:red;
+	display:none;
+	margin-bottom:10px;
+}
+.error-msg2{
+	color:red;
+	display:none;
+	margin-bottom:10px;
+}
+.top-error{
+	color:red;
+	display:none;
+	margin-bottom:10px;
+}
+</style>
+</head>
+<body>	
+<img src="./img/linkedin-logo.jpg" alt="logo" style="width:100px; height:auto;">
+<form id="fulldiv">
+	<div class="header">
+		<h1>Sign in</h1>
+		<p class="world">Stay updated on your professional world</p>
+		<p class="top-error">incorect user..!</p>
+	</div>
+	<div class="passwordbox">
+		<input type="email" name="useremail" placeholder="Email or Phone" class="passwordboxin eMAIL" id="mailId">
+		<p class="error-msg">Please Enter email Id..!</p>
+	</div>
+	<div class="passwordbox span11">
+		<input type="password" name="userpassword" placeholder="password" class="passwordboxin pasWRD" id="userpassword"><span class="span1" id="span1">show</span></input>
+		<p class="error-msg2">Please Enter corect password..!</p>
+	</div>
+	<div class="forget">
+		<button type="button" class="but1">Forgot password?</button>
+	</div>
+	<div class="signin">
+		<button type="button" onclick="signIn(event)" id="but2">Sign in</button>
+	</div>
+	<div class="or">
+		<div class="div"></div>
+		<span class="span">or</span>
+	</div>
+	<div class="join">
+		<button type="button"  id="but3">New to LinkedIn? Join now</button>
+	</div>
+</form>
+
+
+<script>
+	let singnInBtn = document.getElementById("but2")
+	let mailget = document.getElementsByClassName("passwordboxin");
+	let mailId = document.getElementById ("mailId");
+	let password = document.getElementById ("userpassword");
+
+	
+	let array = [];
+	function signIn(event){
+	
+		let isValid;
+		for(let x=0; x < mailget.length; x++){
+			isValid = 0;
+			if(mailget[x].value === ""){
+				mailget[x].parentNode.getElementsByTagName("p")[0].classList.add("invalid-input");
+				isValid++;
+			}
+			else{
+				mailget[x].parentNode.getElementsByTagName("p")[0].classList.remove("invalid-input");
+			}
+		}
+	
+	if(isValid == 0){
+			if(password.value.length < 6 ){
+				document.getElementsByClassName("error-msg2")[0].classList.add("invalid-input");
+			}
+			else{
+				document.getElementsByClassName("error-msg2")[0].classList.remove("invalid-input");
+			}
+		}
+	 
+	 
+	 let userObject = { 
+			id:Math.random().toString(),
+			mailId: mailId.value,
+			password:password.value
+		}
+		<!-- array.push(userObject); -->
+		console.log(array)
+		
+		
+		
+		let defaultuser = [{
+			id:10101,
+			mailId:"dhanush.sithananthan@gmail.com",
+			password:"Sith@2000"
+		},
+		{
+			id:10102,
+			mailId:"soniya@gmail.com",
+			password:"fed062022"
+		},
+		{
+			id:10103,
+			mailId:"akash@gmail.com",
+			password:"Fed062023"
+		},
+		{
+			id:10104,
+			mailId:"anu@gmail.com",
+			password:"fed062024"
+		},
+		{
+			id:10105,
+			mailId:"karthi@gmail.com",
+			password:"Fed062025"
+		},
+		{
+			id:10106,
+			mailId:"yogash@gmail.com",
+			password:"fed062026"
+		},
+		{
+			id:10107,
+			mailId:"ragu@gmail.com",
+			password:"Fed062027"
+		},
+		{
+			id:10108,
+			mailId:"hari@gmail.com",
+			password:"fed062028"
+		},
+		{
+			id:10109,
+			mailId:"elamurugu@gmail.com",
+			password:"Fed062029"
+		}];
+		
+		
+		
+		
+		
+		
+		
+		for (let x=0; x < defaultuser.length; x++){
+		<!-- let finduser = defaultuser.find(function(event){ -->
+			<!-- userObject.mailId == defaultuser[x].mailId -->
+		
+			if (userObject.mailId == defaultuser[x].mailId){
+				array.push(userObject.mailId);
+			}else if(userObject.mailId == defaultuser[x].mailId){
+				document.getElementsByClassName("error-msg")[0].classList.toggle("invalid-input");
+			}
+			
+			if(userObject.password == defaultuser[x].password){
+				array.push(userObject.password);
+				var userid = array.push(defaultuser[x].id)
+				localStorage.setItem("userid",defaultuser[x].id);
+			}else if(userObject.password == defaultuser[x].password){
+				document.getElementsByClassName("error-msg2")[0].classList.toggle("invalid-input");
+			}
+			
+			
+			
+			<!-- if(userObject.mailId == defaultuser[x].mailId){ -->
+				<!-- document.getElementsByClassName("top-error")[0].classList.remove("invalid-input"); -->
+				<!-- document.getElementsByClassName("error-msg")[0].classList.remove("invalid-input"); -->
+				<!-- document.getElementsByClassName("error-msg2")[0].classList.remove("invalid-input"); -->
+			<!-- }else if(userObject.mailId !== defaultuser[x].mailId){ -->
+				<!-- document.getElementsByClassName("top-error")[0].classList.add("invalid-input"); -->
+				<!-- document.getElementsByClassName("error-msg")[0].classList.remove("invalid-input"); -->
+				<!-- document.getElementsByClassName("error-msg2")[0].classList.remove("invalid-input"); -->
+			<!-- } -->
+			
+			else if(array.length == 1){
+				document.getElementsByClassName("top-error")[0].classList.add("invalid-input");
+				array.length = 0;
+			}else if(array.length == 3){
+				document.getElementsByClassName("top-error")[0].classList.remove("invalid-input");
+				
+				return logIn(event);
+				
+			}
+			
+			<!-- }) -->
+		}
+		
+			<!-- let pageUrl = window.location.href; -->
+			<!-- if (pageUrl.includes("index.html")){ -->
+				<!-- let getIslogin = localStorage.getItem("signIn"); -->
+				
+				<!-- if(!getIslogin){ -->
+					<!-- window.location.replace("login.html") -->
+				<!-- } -->
+			<!-- } -->
+		function logIn(event){
+			event.preventDefault();
+			localStorage.setItem("signIn",true);
+			<!-- localStorage.setItem("userData",userProfile);  -->
+			window.location.replace("index.html");
+		}
+	} 
+	
+	<!-- if(userObject.mailId == defaultuser[x].mailId) -->
+	<!-- if(userObject.password == defaultuser[x].password) -->
+	
+	 let elefullform = document.getElementById("fulldiv");
+ elefullform.addEventListener("submit", function(event){
+	event.preventDefault();
+	signIn();
+ });
+
+	
+let showBtn = document.getElementById("span1");
+let passwordShow = document.getElementById("userpassword");
+
+showBtn.addEventListener("click",function(event){
+	if (passwordShow.type == "password"){
+    passwordShow.setAttribute("type", "text");
+  } else {
+    passwordShow.setAttribute("type", "password");
+  }
+})
+
+
+</script>
+
+</body>
+</html>

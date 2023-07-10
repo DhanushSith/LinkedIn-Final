@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile page</title>
+<link rel="stylesheet" href="./CSS/style.css">
+<link rel="stylesheet" href="./CSS/profile_style.css">
+<link rel="stylesheet" href="./CSS/experiance.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="./icon/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>	
+
+<section class="full_body_page">
+<header class="head" style="z-index:2;position:fixed;">
+	<div class="container">
+		<div class="flex-container">
+			<div class="flex-item-5">
+				<div class="logo">
+					<img src="./img/logo.png" alt="logo" style="width:35px;display:inline;">
+				<!-- </div> -->
+				<!-- <div class="flex-item-8 search"> -->
+					<div class="searchiconandplace">
+						<i class="fa fa-search" aria-hidden="true" id="zoom"></i>
+						<input type="search" name="search" placeholder="search" class="search">
+					</div>
+				</div>
+			</div>
+			<div class="flex-item-6">
+				<div class="logo2">
+					<!-- <button class="buttonhome" type="button" onclick="gotohome(event)"> -->
+					<div class="div1" onclick="gotohome(event)">
+					<i class="fa fa-home" aria-hidden="true" id="icon2"></i>
+					<p class="parahome">Home</p>
+					</div>
+					<!-- </button> -->
+					<div class="div1">
+					<i class="fa fa-user" aria-hidden="true" id="icon2"></i>
+					<p class="parahome">My Network</p>
+					<!-- <i class="fa fa-users" aria-hidden="true" id="icon2"></i> -->
+					</div>
+					<div class="div1">
+					<i class="fa fa-briefcase" aria-hidden="true"></i>
+					<p class="parahome">Job</p>
+					</div>
+					<div class="div1">
+					<i class="fa fa-commenting" aria-hidden="true"></i>
+					<p class="parahome">Messaging</p>
+					</div>
+					<div class="div1">
+						<i class="fa fa-bell" aria-hidden="true"></i>
+						<p class="parahome">Notification</p>
+					</div>
+					<div class="div1 call">
+						<i class="fa fa-user-circle" aria-hidden="true"></i>
+						<p class="parahome rel">Me<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+							<div class="pos">
+								<div class="poshead">
+									<!-- <i class="fa fa-user-circle" aria-hidden="true" id="log11"></i> -->
+									<img src="" class="image1 user1" id="log11">
+									<div class="vinName">
+										<a href="#" class="name-a" ><h2 id="name-b">Vinoth K</h2><a>
+										<p>Senior Front End Developer</p>
+									</div>
+								</div>
+								<div class="viewprofile">
+									<button type="button" class="btnview" onclick="profileView()">View Profile</button>
+								</div>
+								<br>
+								<hr>
+								<br>
+								<div class="account">
+									<p>Account</p>
+									<div class="flex-container box box2">
+										<div class="flex-item-3">
+											<div class="boxx poss"></div>
+										</div>
+										<div class="flex-item-9">
+											<a href="##" class="tryfree">Try premium for free</a>
+										</div>
+									</div>
+									<a href="##" class="account-a">Settings & Privacy</a><br>
+									<a href="##" class="account-a">Help</a><br>
+									<a href="##" class="account-a">Language</a>
+								</div>
+								<hr>
+								<div class="accountdiv">
+									<p>Manage</p>
+									<a href="##" class="account-a">Posts & Activity</a><br>
+									<a href="##" class="account-a">Job posting Account</a><br>
+								</div>
+								<hr>
+								<div class="sighout">
+									<button type="button" class="account-a" onclick="signOut(event)" id="signbtn">Sign Out</button>
+								</div>
+							</div>
+					</div>
+					
+					<hr>
+					
+					<div class="div1">
+					<i class="fa fa-th" aria-hidden="true"></i>
+					<p class="parahome">For Business<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+					</div>
+				</div>
+			</div>
+			<div class="flex-item-1 link">
+				<a href="#" class="freetry"><p>Try premium for free</p></a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- <section class="profile_body"> -->
+	<!-- <div class="container"> -->
+		<!-- <div class="flex-container"> -->
+			<!-- <div class="flex-item-8"> -->
+				<!-- <div class="tools_box"> -->
+					<!-- <a href="#" class="tools_heading">Analytics & tools<p>Post impressions past 7 days 20</p><i class="fa fa-caret-up" aria-hidden="true"></i></a> -->
+				<!-- </div> -->
+			<!-- </div> -->
+		<!-- </div> -->
+	<!-- </div> -->
+<!-- </section> -->
+
+
+<section class="profile_body" style="z-index:1;padding-top:80px;">
+	<div class="container">
+		<div class="flex-container">
+			<div class="flex-item-9">
+				<div class="toolsdiv">
+					<div class="flex-item-10">
+						<div class="toos_box">
+							<a href="#" class="tools">Analytics & tools</a>
+							<div>
+								<a href="#" class="days20">Post impressions past 7 days 20</a>
+								<a href="#" class="days20Icon"><i class="fa fa-caret-up" aria-hidden="true"></i><span class="num_span">122.3%</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="flex-item-2 arrowdiv">
+						<i class="fa fa-arrow-right arroe" aria-hidden="true"></i>
+					</div>
+				</div>
+				
+				<div class="imgdiv">
+					<div class="img_bg_Icon">
+						<div class="icon_div_img">
+							<img src="" id="img_bg">
+							<i class="fa fa-pencil imgpen" aria-hidden="true"></i>
+							
+						</div>
+						<!-- <i class="fa fa-user-circle user1" aria-hidden="true" id="img_icon"></i> -->
+						<img src="" class="image1 user1" id="img_icon">
+					</div>
+					<div class="flex-item-12 imgdiv_content">
+						
+						<div class="flex-item-8">
+							<h1 id="name"></h1>
+							<p class="work_knowlage">footwear designer / graphic designer / frontend developer</p>
+							<p class="hastag" id="hastag">Talks about #frontend, #devloper, #footwear, #footweardesigner, and #footwearindustry</p>
+							<div class="city">Chennai, Tamil Nadu, India <a href="#" id="con_info">Contact info</a><br></div>
+							<div class="followers"><a href="#">494 followers </a>.<a href="#">467 connections</a><br></div>	
+							<button type="button" class="open_btn">open to</button><button type="button" class="open_btn2">Add profile section</button><button type="button" class="open_btn3">more</button>
+						</div>
+						
+						<div class="flex-item-4 companydiv">
+							<div class="pencil">
+								<button type="button" id="pencil_btn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+							</div>
+							<div class="company">
+								<i class="fa fa-building-o" aria-hidden="true"></i>
+								<div>
+								<a href="#">Meme worldwide India pvt.ltd Chennai</a>
+								</div>
+							</div>
+							<div class="company">
+								<i class="fa fa-building-o" aria-hidden="true"></i>
+								<div>
+								<a href="#">Centrel footwear training institute - Chennai</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="sugesed_div">
+					<div class="flex-item-12 sugeseddiv_content">
+						<div class="flex-item-12">
+							<h1 class="suggesed_name">Suggested for you</h1>
+							<div class="eye">
+							<i class="fa fa-eye" aria-hidden="true"></i>
+							<p class="private">private to you</p>
+							</div>
+							<h4>Intermediate</h4>
+							<div class="schaldiv">
+								<div class="schal"><div class="inschal"></div></div>
+								<div style="padding-left:10px;">6/7</div>
+							</div>
+							<div class="onestep">
+								<p>Complete 1 step to achieve</p>	
+								<a href="#">All-Star</a>
+							</div>
+							<div class="summery">
+								<div class="news">
+									<i class="fa fa-newspaper-o" aria-hidden="true"></i>	
+									<h4>Write a summary to highlight your personality or work experience</h4>
+								</div>
+								<p>Members who include a summary receive up to 3.9 times as many profile views.</p>
+								<button type="button" class="open_btn3">Add a summery</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="sugesed_div">
+					<div class="flex-item-12 sugeseddiv_content">
+						<div class="flex-item-12">
+							<h1 class="suggesed_name">Resources</h1>
+							<div class="eye">
+								<i class="fa fa-eye" aria-hidden="true"></i>
+								<p class="private">private to you</p>
+							</div>
+							<div class="antana">
+								<i class="fa fa-rss" aria-hidden="true"></i>
+								<a href="#" class="creat_mode">Creator mode</a>
+								<a href="#" class="on_btn">on</a>
+							</div>
+								<a href="#" class="discovered">Get discovered, showcase content on your profile, and get access to creator tools</a>
+								<br>
+								<br>
+								<hr>
+								<br>
+							<div class="antana">
+								<i class="fa fa-users" aria-hidden="true"></i>
+								<a href="#" class="creat_mode">My Network</a>
+							</div>
+								<a href="#" class="discovered">See and manage your connections and interests.</a>
+								<br>
+								<br>
+								<hr>
+							<div class="showall">
+								<a href="#" class="creat_mode">Show all activity</a>
+								<i class="fa fa-arrow-right arroe" aria-hidden="true"></i>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+					
+					
+					<br>
+					
+					<div class="experians">
+						<div class="experience_head">
+							<h1>Experience</h1>
+							<div style="display:flex;align-items:center;">
+							<div class="plus_pop_div">
+								<div class="plusExtention">
+								<p class="plus" id="exp_plus">+</p>
+								</div>
+								<div class="pop_Exp_plus" id="pop_Exp_plus">
+									<div class="opo_add" id="opo_add_exp">
+									<i class="fa fa-briefcase" aria-hidden="true"></i>
+									<h4>Add Position</h4>
+									</div>
+									<hr>
+									<div class="opo_add2">
+									<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+									<h4>Add career break</h4>
+									</div>
+								</div>
+							</div>
+							
+							<i class="fa fa-pencil" aria-hidden="true" id="penedit" onclick="gotoecperiance(event)"></i>
+							</div>
+						</div>
+						
+						<div class="company expe_company">
+								<i class="fa fa-building-o" aria-hidden="true"></i>
+								<div>
+									<h2 class="posiction">Footwear Designer</h2>
+									<p class="job">Meme worldwide India Pvt ltd Chennai · Full-time</p>
+									<p class="date">Nov 2020 - Present · 2 yrs 6 mos</p>
+									<p class="date">Chennai, Tamil Nadu, India</p>
+									<p class="designation">footwear designer</p>
+									<p class="skill"><b>Skills:</b> Adobe Photoshop</p>
+								</div>
+						</div>
+						<hr>
+						<div class="company expe_company">
+								<i class="fa fa-building-o" aria-hidden="true"></i>
+								<div>
+									<h2 class="posiction">Footwear Designer</h2>
+									<p class="job">Kocoon · Part-time</p>
+									<p class="date">May 2020 - Aug 2020 · 4 mos</p>
+									<p class="date">Chennai, Tamil Nadu, India</p>
+									<p class="designation">footwear designer at kocoon.</p>
+								</div>
+						</div>
+						<hr>
+						<div class="company expe_company">
+								<i class="fa fa-building-o" aria-hidden="true"></i>
+								<div>
+									<h2 class="posiction">Footwear Designer</h2>
+									<p class="job">KENMORE SHOES PRIVATE LIMITED · Full-time</p>
+									<p class="date">Dec 2019 - May 2020 · 6 mos</p>
+									<p class="date">Chennai, Tamil Nadu, India</p>
+									<p class="designation">footwear designer (pattern Maker) at Kenmore shoes</p>
+								</div>
+						</div>
+					</div>
+					
+					<br>
+					
+					<div class="experians">
+						<div class="experience_head">
+							<h1>Education</h1>
+							<div style="display:flex;align-items:center;">
+							<p class="plus" id="plus">+</p>
+							<i class="fa fa-pencil" aria-hidden="true" id="penedit" onclick="gotoeducation(event)"></i>
+							</div>
+						</div>
+						
+						<div class="company expe_company">
+								<i class="fa fa-building-o" aria-hidden="true"></i>
+								<div>
+									<h2 class="posiction">Centeral foodwear training institute</h2>
+									<p class="job">Diplama in footwear manufacturing and designing</p>
+									<p class="date">2017 - 2019</p>
+									<p class="date">Chennai, Tamil Nadu, India</p>
+									<p class="skill"><b>Skills:</b> Adobe Photoshop</p>
+								</div>
+						</div>
+					</div>
+					
+					<br>
+					<br>
+					
+				</div>
+				
+				
+				
+				
+			<!-- </div>	 -->
+			<!-- <div class="flex-container"> -->
+				<div class="flex-item-3 centerbox">
+					<div class="flex-container center_boxmain22">
+						<div class="center_box2">
+							<div>
+								<h2 class="people">People you may know</h2>
+								<div class="flex-container">
+										<img src="./img/person-3.jpg" class="image1">
+									<div class="flex-item-9 details_name">
+										<h2 class="people_name">Soniya Vasu</h2>
+										<p class="date_name">Frontend Developer / Lead UI devloper</p>
+										<p class="date_name">Zogo (chennai)</p>
+										
+										<button type="button" class="conect"><i class="fa fa-user" aria-hidden="true">+</i>Connect</button>
+									</div>
+								</div>
+								<br>
+								<hr>
+								<br>
+								<div class="flex-container">
+										<img src="./img/person-2.jpg" class="image1">
+									<div class="flex-item-9 details_name">
+										<h2 class="people_name">Akash Anbu</h2>
+										<p class="date_name">Frontend Developer / Lead UX Designer</p>
+										<p class="date_name">Zogo (chennai)</p>
+										
+										<button type="button" class="conect"><i class="fa fa-user" aria-hidden="true">+</i>Connect</button>
+									</div>
+								</div>
+								<br>
+								<hr>
+								<br>
+								<div class="flex-container">
+										<img src="./img/person-6.jpg" class="image1">
+									<div class="flex-item-9 details_name">
+										<h2 class="people_name">Anugrahan</h2>
+										<p class="date_name">Frontend Developer / Lead UI devloper</p>
+										<p class="date_name">Zogo (chennai)</p>
+										
+										<button type="button" class="conect"><i class="fa fa-user" aria-hidden="true">+</i>Connect</button>
+									</div>
+								</div>
+								<br>
+								<hr>
+								<br>
+								<div class="flex-container">
+										<img src="./img/person-5.jpg" class="image1">
+									<div class="flex-item-9 details_name">
+										<h2 class="people_name">Raguvaran</h2>
+										<p class="date_name">Frontend Developer / Lead UX Designer</p>
+										<p class="date_name">Zogo (chennai)</p>
+										
+										<button type="button" class="conect"><i class="fa fa-user" aria-hidden="true">+</i>Connect</button>
+									</div>
+								</div>
+								<br>
+								<hr>
+								<br>
+								<div class="flex-container">
+										<img src="./img/person-4.jpg" class="image1">
+									<div class="flex-item-9 details_name">
+										<h2 class="people_name">Karthi</h2>
+										<p class="date_name">Frontend Developer / Lead UI devloper</p>
+										<p class="date_name">Zogo (chennai)</p>
+										
+										<button type="button" class="conect"><i class="fa fa-user" aria-hidden="true">+</i>Connect</button>
+									</div>
+								</div>
+								<br>
+								<hr>
+								<br>
+								<div class="flex-container">
+										<img src="./img/person-8.jpg" class="image1">
+									<div class="flex-item-9 details_name">
+										<h2 class="people_name">Yokesh</h2>
+										<p class="date_name">Frontend Developer / Lead UX Designer</p>
+										<p class="date_name">Zogo (chennai)</p>
+										<button type="button" class="conect"><i class="fa fa-user" aria-hidden="true">+</i>Connect</button>
+									</div>
+								</div>
+								<br>
+								<hr>
+								<br>
+								<div class="flex-container">
+										<img src="./img/person-1.png" class="image1">
+									<div class="flex-item-9 details_name">
+										<h2 class="people_name">Hari Kishor</h2>
+										<p class="date_name">Frontend Developer / Lead UI Designer</p>
+										<p class="date_name">Zogo (chennai)</p>
+										<button type="button" class="conect"><i class="fa fa-user" aria-hidden="true">+</i>Connect</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="footer">
+	<div class="container">
+		<div class="flex-container">
+			<div class="flex-item-2">
+				<div class="aboutSec">
+					<a href="###">About</a><br>
+					<a href="###">Community Guidelines</a><br>
+					<a href="###">Privacy & Terms </a><br>
+					<a href="###">Sales Solutions</a><br>
+					<a href="###">Safety Center</a><br>
+				</div>
+			</div>
+			<div class="flex-item-1">
+				<div class="aboutSec">
+					<a href="###">Accessibility</a><br>
+					<a href="###">Careers</a><br>
+					<a href="###">Ad Choices </a><br>
+					<a href="###">Mobile</a><br>
+					
+				</div>
+			</div>
+			<div class="flex-item-2">
+				<div class="aboutSec">
+					<a href="###">Talent Solutions</a><br>
+					<a href="###">Marketing Solutions</a><br>
+					<a href="###">Advertising </a><br>
+					<a href="###">Small Business</a><br>
+					
+				</div>
+			</div>
+			<div class="flex-item-4">
+				<div class="aboutSec2">
+					<div class="flex-item-1">
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
+					</div>
+					<div class="flex-item-11">
+						<a href="###">Questions?</a>
+						<p>Visit our Help Center.</p>
+					</div>
+				</div>
+				<div class="aboutSec2">
+					<div class="flex-item-1">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+					</div>
+					<div class="flex-item-11">
+						<a href="###">Manage your account and privacy</a>
+						<p>Go to your Settings.</p>
+					</div>
+				</div>
+				<div class="aboutSec2">
+					<div class="flex-item-1">
+						<i class="fa fa-shield" aria-hidden="true"></i>
+					</div>
+					<div class="flex-item-11">
+						<a href="###">Recommendation transparency</a>
+						<p>Learn more about Recommended Content.</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex-item-3">
+				<div class="aboutSec">
+					<label for="pronouns" class="f_l_name">Select Language</label><br>
+			  <select id="pronouns" name="reffer">
+				<option value="please-selet">Please select</option>
+				<option value="dsigner" selected>English(English)</option>
+			  </select>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+<!-- <div class="hidden pageCover" id="blurDiv"></div> -->
+
+
+<form id="editintro" class="editintro">
+		<div class="head_editintro">
+			<h1 class="heading_edit">Edit intro</h1>
+			<i class="fa fa-times x_icon" aria-hidden="true" id="removeBtn"></i>
+		</div>
+		<!-- <form id="introForm"> -->
+		<div class="scroll_div">
+			<p class="Indicates_required">* Indicates required</p>
+			<h1 class="Basic_head">Basic info</h1>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">First name*</label><br>
+				<input type="text" id="fname" name="fname" value="Dhanush" class="fname">
+				<p class="error-msg">Please Enter valid First Name..!</p>
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Last name*</label><br>
+				<input type="text" id="sname" name="sname" value="Sithananthan" class="sname">
+				<p class="error-msg2">Please Enter valid Last Name..!</p>
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Additional name</label><br>
+				<input type="text" id="aname" name="aname" value="" class="aname">
+			</div>
+			<p class="f_l_name">Name pronunciation</p>
+			<div class="mobile_app">
+				<i class="fa fa-tumblr-square" aria-hidden="true"></i>
+				<p class="mobile_app_para">This can only be added using our mobile app</p>
+			</div>
+			<div class="selection_div">
+			<label for="pronouns" class="f_l_name">Pronouns</label><br>
+			  <select id="pronouns" name="reffer">
+				<option value="please-selet" selected>Please select</option>
+				<option value="she-her">She/Her</option>
+				<option value="he-him">He/Him</option>
+				<option value="they-them">They/Them</option>
+				<option value="custom">Custom</option>
+			  </select>
+			  <p class="f_l_name">Let others know how to refer to you.</p>
+			  <p class="gender_pronouns">Learn more about <a href="##" class="bold_link"><b>gender pronouns.</b></a></p>
+			 </div>
+			 <div class="first_name">
+				<label for="fname" class="f_l_name">Headline*</label><br>
+				<input type="text" id="headname" name="fname" value="footwear designer / graphic designer / frontend developer">
+			</div>
+			<div class="selection_div">
+			<h1 class="Basic_head">Current position</h1>
+			<br>
+			<label for="pronouns" class="f_l_name">Position *</label><br>
+			  <select id="pronouns" name="reffer">
+				<option value="please-selet">Please select</option>
+				<option value="" id="position" selected>frontend developer</option>
+			  </select>
+			 </div>
+			 <div class="a_addPosition">
+			 <a href="##" class="addPosition"><p class="plus">+</p>Add new position</a>
+			 </div>
+			 <div class="current_company">
+				<i class="fa fa-check tick" aria-hidden="true"></i>
+				<p class="mobile_app_para">Show current company in my intro</p>
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Industry*</label><br>
+				<input type="text" id="fname" name="fname" value="IT Services and IT Consulting">
+				<p class="gender_pronouns">Learn more about <a href="##" class="bold_link"><b> industry options</b></a></p>
+			</div>
+			<div class="selection_div">
+			<h1 class="Basic_head">Education</h1>
+			<br>
+			<label for="pronouns" class="f_l_name">Education*</label><br>
+			  <select id="pronouns" name="reffer">
+				<option value="please-selet">Please select</option>
+				<option value="dsigner" selected>Central footwear training institute - india</option>
+			  </select>
+			 </div>
+			 <div class="a_addPosition">
+			 <a href="##" class="addPosition"><p class="plus">+</p>Add new position</a>
+			 </div>
+			 <div class="current_company">
+				<i class="fa fa-check tick" aria-hidden="true"></i>
+				<p class="mobile_app_para">Show education in my intro</p>
+			</div>
+			<div class="selection_div">
+				<h1 class="Basic_head">Location</h1>
+				<br>
+				<label for="pronouns" class="f_l_name">Country/Region *</label><br>
+				<input type="text" id="fname" name="fname" value="India">
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">City</label><br>
+				<input type="text" id="fname" name="fname" value="Chennai, Tamil Nadu">
+			</div>
+			<div>
+				<h2 class="Contact_info">Contact info</h2>
+				<p class="Contact_info_para"><b>Add or edit your profile URL, email, and more</b></p>
+			</div>
+			<div class="a_addPosition">
+				<a href="##" class="addPosition">Edit Contact info</a>
+			</div>
+			<div class="selection_div">
+				<h1 class="Basic_head">Website</h1>
+				<br>
+				<p class="Contact_info_para2">Add a link that will appear at the top of your profile</p>
+				<label for="pronouns" class="f_l_name">Link</label><br>
+				<input type="text" id="fname" name="fname" value="">
+			</div>
+		</div>
+		<!-- </form> -->
+		<div class="save">
+			<button type="submit" class="save_btn" id="save_btn">Save</button>
+		</div>
+</form>
+
+<!-- + button pop -->
+
+<section id="editintro2" class="editintro2">
+		<div class="head_editintro">
+			<h1 class="heading_edit">Add Education</h1>
+			<i class="fa fa-times x_icon" aria-hidden="true" id="removeBtn2"></i>
+		</div>
+		<div class="scroll_div">
+			<div class="notify_div">
+				<div class="notify">
+					<div>
+						<h4>Notify network</h4>
+						<p class="gender_pronouns media_para">Turn on to notify your network of key profile changes (such as new job) and work anniversaries. Updates can take up to 2 hours. <a href="###" class="bold_link"><b>Learn more about sharing profile changes.</b></a></p>
+					</div>
+					<div>
+						<div class="schaldiv2">
+							<div class="schal2" id="schal2"><div class="inschal2"></div></div>
+							<div style="padding-left:10px;" id="schal_on_off">ON</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="Indicates_required">* Indicates required</p>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">School*</label><br>
+				<div class="companyicon">
+				<input type="text" id="fname2" name="fname" value="" class="memeinput">
+				</div>
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Degree</label><br>
+				<input type="text" id="fname" name="fname" value="">
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Field of study</label><br>
+				<input type="text" id="fname" name="fname" value="">
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Start date </label><br>
+				<div class="twoselection">
+					<select id="pronouns" name="reffer">
+						<option value="please-selet" selected>month</option>
+						<option value="Janusry">Janusry</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+					</select>
+					<select id="pronouns" name="reffer">
+						<option value="please-selet" selected>Year</option>
+						<option value="2023">2023</option>
+						<option value="2022">2022</option>
+						<option value="2021">2021</option>
+						<option value="2020">2020</option>
+						<option value="2019">2019</option>
+					</select>
+				</div>
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">End date </label><br>
+				<div class="twoselection">
+					<select id="pronouns" name="reffer">
+						<option value="please-selet" selected>month</option>
+						<option value="Janusry">Janusry</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+					</select>
+					<select id="pronouns" name="reffer">
+						<option value="please-selet" selected>Year</option>
+						<option value="2023">2023</option>
+						<option value="2022">2022</option>
+						<option value="2021">2021</option>
+						<option value="2020">2020</option>
+						<option value="2019">2019</option>
+					</select>
+				</div>
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Employment type</label><br>
+				<select id="pronouns" name="reffer">
+				<option value="please-selet">Please select</option>
+				<option value="Full-time" selected>Full-time</option>
+				<option value="Part-time">Part-time</option>
+				<option value="Self-employed">Self-employed</option>
+				<option value="freelance">Freelance</option>
+				<option value="Inernship">Inernship</option>
+				<option value="Trainee">Trainee</option>
+			  </select>
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Grade</label><br>
+				<input type="text" id="fname" name="fname" value="">
+			</div>
+			 <div class="first_name">
+				<label for="fname" class="f_l_name">Activities and societies</label><br>
+				<textarea type="text" id="msgbox" name="fname" value=""></textarea>
+				 <p class="f_l_name"style="text-align:right;">0 / 500</p>
+			</div>
+			 <div class="first_name">
+				<label for="fname" class="f_l_name">Description</label><br>
+				<textarea type="text" id="msgbox" name="fname" value=""></textarea>
+				 <p class="f_l_name"style="text-align:right;">0 / 2000</p>
+			</div>
+			
+		</div>
+		<div class="saveExp2 educa_save">
+			<button type="submit" class="save_btn" id="save_btn2">Save</button>
+		</div>
+</section>
+
+<!-- add Experiance -->
+
+
+<section id="editintro3" class="editintro3">
+		<div class="head_editintro">
+			<h1 class="heading_edit">Add experience</h1>
+			<i class="fa fa-times x_icon" aria-hidden="true" id="removeBtn3"></i>
+		</div>
+		<div class="scroll_div">
+			<div class="notify_div">
+				<div class="notify">
+					<div>
+						<h4>Notify network</h4>
+						<p class="gender_pronouns media_para">Turn on to notify your network of key profile changes (such as new job) and work anniversaries. Updates can take up to 2 hours. <a href="###" class="bold_link"><b>Learn more about sharing profile changes.</b></a></p>
+					</div>
+					<div>
+						<div class="schaldiv2">
+							<div class="schal2" id="schal4"><div class="inschal2"></div></div>
+							<div style="padding-left:10px;" id="schal_on_off2">ON</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="Indicates_required">* Indicates required</p>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Title*</label><br>
+				<input type="text" id="fname" name="fname" value="">
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Employment type</label><br>
+				<select id="pronouns" name="reffer">
+				<option value="please-selet" selected>Please select</option>
+				<option value="Full-time">Full-time</option>
+				<option value="Part-time">Part-time</option>
+				<option value="Self-employed">Self-employed</option>
+				<option value="freelance">Freelance</option>
+				<option value="Inernship">Inernship</option>
+				<option value="Trainee">Trainee</option>
+			  </select>
+			</div>
+			 <p class="gender_pronouns learnmore">Learn more about <a href="##" class="bold_link"><b>gender pronouns.</b></a></p>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Company name*</label><br>
+				<div class="companyicon">
+				<input type="text" id="fname2" name="fname" value="" class="memeinput">
+				<!-- <i class="fa fa-building companyicon2" aria-hidden="true"></i> -->
+				</div>
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Location</label><br>
+				<input type="text" id="fname" name="fname" value="">
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Location type</label><br>
+				<select id="pronouns" name="reffer">
+				<option value="please-selet" selected>Please select</option>
+				<option value="On-site">On-site</option>
+				<option value="Hybrid">Hybrid</option>
+				<option value="Remote">Remote</option>
+			  </select>
+			  <p class="f_l_name">Pick a location type (ex: remote)</p>
+			</div>
+			 <div class="current_company">
+				<i class="fa fa-check tick" aria-hidden="true"></i>
+				<p class="mobile_app_para">I am currently working in this role</p>
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">Start date </label><br>
+				<div class="twoselection">
+					<select id="pronouns" name="reffer">
+						<option value="please-selet" selected>month</option>
+						<option value="Janusry">Janusry</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+					</select>
+					<select id="pronouns" name="reffer">
+						<option value="please-selet" selected>Year</option>
+						<option value="2023">2023</option>
+						<option value="2022">2022</option>
+						<option value="2021">2021</option>
+						<option value="2020">2020</option>
+						<option value="2019">2019</option>
+					</select>
+				</div>
+			</div>
+			<div class="first_name">
+				<label for="fname" class="f_l_name">End date </label><br>
+				<div class="twoselection">
+					<select id="pronouns" name="reffer">
+						<option value="please-selet" selected>month</option>
+						<option value="Janusry">Janusry</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+					</select>
+					<select id="pronouns" name="reffer">
+						<option value="please-selet" selected>Year</option>
+						<option value="2023">2023</option>
+						<option value="2022">2022</option>
+						<option value="2021">2021</option>
+						<option value="2020">2020</option>
+						<option value="2019">2019</option>
+					</select>
+				</div>
+			</div>
+			<div class="selection_div">
+				<label for="pronouns" class="f_l_name">Industry *</label><br>
+				  <input type="text" id="fname" name="fname" value="">
+				  <p class="f_l_name">LinkedIn uses industry information to provide more relevant recommendations</p>
+				  <p class="gender_pronouns">Learn more about <a href="##" class="bold_link"><b>industry options.</b></a></p>
+			 </div>
+			 <div class="first_name">
+				<label for="fname" class="f_l_name">Description</label><br>
+				<textarea type="text" id="msgbox" name="fname" value="">frontend devloper</textarea>
+				 <p class="f_l_name"style="text-align:right;">17 / 2000</p>
+			</div>
+			<div class="selection_div">
+				<label for="pronouns" class="f_l_name">Profile headline</label><br>
+				  <input type="text" id="fname" name="fname" value="">
+				  <p class="f_l_name">Appears below your name at the top of the profile</p>
+			 </div>
+			
+			<div class="selection_div">
+				<h1 class="Basic_head">Skills</h1>
+				<p class="Contact_info_para2">We recommend adding your top 5 used in this role. They’ll also appear in your Skills section.</p>
+			</div>
+			
+			<div class="Photoshop_div">
+				<a href="##" class="photoshop">Adobe Photoshop<i class="fa fa-times x_icon_a" aria-hidden="true"></i></a><br><br><br>
+				<a href="##" class="addSkill"><i class="fa fa-plus plus_icon_a" aria-hidden="true"></i>Add Skill</a>
+			</div>
+			
+			<div class="Suggested_box">
+				<div class="Suggested_head">
+					<h2>Suggested based on your title</h2>
+					<i class="fa fa-times x_icon_a" aria-hidden="true"></i>
+				</div>
+				<div class="a_link">
+					<p><a href="##" class="addSkil2">AutoCAD<i class="fa fa-plus" id="plus_icon_a" aria-hidden="true"></i></a></p>
+					<p><a href="##" class="addSkil2">Computer-Aided Design (CAD)<i class="fa fa-plus" id="plus_icon_a" aria-hidden="true"></i></a></p>
+					<p><a href="##" class="addSkil2">Retail<i class="fa fa-plus" id="plus_icon_a" aria-hidden="true"></i></a></p>
+					<p><a href="##" class="addSkil2">Sales<i class="fa fa-plus" id="plus_icon_a" aria-hidden="true"></i></a></p>
+					<p><a href="##" class="addSkil2">Communication<i class="fa fa-plus" id="plus_icon_a" aria-hidden="true"></i></a></p>
+				</div>
+			</div>
+			<div class="media">
+				<h3>Media</h3>
+				<p class="gender_pronouns media_para">Add or link to external documents, photos, sites, videos, and presentations. Learn more about  <a href="##" class="bold_link"><b>media file types supported</b></a></p>
+				<a href="##" class="addSkill"><i class="fa fa-plus plus_icon_a" aria-hidden="true"></i>Add Skill</a>
+			</div>
+			
+			
+		</div>
+		<div class="saveExp">
+			<button type="button" class="delete_btn" id="delete_btn">Delete experience</button>
+			<button type="submit" class="save_btn" id="save_btn3">Save</button>
+		</div>
+</section>
+
+
+</section>
+
+<script src="./js/object.js"></script>
+<!-- <script src="./js/index.js"></script> -->
+<!-- <script src="./js/experiance.js"></script> -->
+</body>
+</html>
