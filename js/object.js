@@ -20,10 +20,10 @@ let userProfile = [
 		localStorage.clear();
 		window.location.replace("login.html")};
 	function gotohome(event){window.location.replace("index.html")};
-	function profileView(event){window.location.replace("Profile.html")};
+	function profileView(event){window.location.replace("profile.html")};
 	function gotoecperiance(event){window.location.replace("experiance.html")};
 	function gotoeducation(event){window.location.replace("education.html")};
-	function goprofpageArrow(event){window.location.replace("Profile.html")};
+	function goprofpageArrow(event){window.location.replace("profile.html")};
 	function gotohome(event){window.location.replace("index.html")
 		// localStorage.remove("objectcreat")
 	};
@@ -430,7 +430,7 @@ let knowlage = document.querySelector(".work_knowlage");
 // localStorage.setItem('userProfile', JSON.stringify(userNewObject));
 // });
 
-if(pageUrl.includes("Profile.html")){
+if(pageUrl.includes("profile.html")){
 if (finduserid) {
 let formEle = document.getElementById("editintro");
 let submitbtn = document.getElementById("save_btn");
