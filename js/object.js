@@ -243,7 +243,7 @@ if (pageUrl.includes("index.html")) {
 	}
 }
 	
-if(pageUrl.includes("Profile.html")){
+if(pageUrl.includes("profile.html")){
 if(finduserid){
 		let userimg = document.getElementById("img_icon").src = finduserid.image;
 		let userimg2 = document.getElementById("log11").src = finduserid.image;
@@ -268,7 +268,7 @@ if(objectcreat){
 	// });
 	// console.log(finduser)
 // pencil button click 
-if(pageUrl.includes("Profile.html")){
+if(pageUrl.includes("profile.html")){
 if(finduserid){
 	let pencilBtn = document.getElementById("pencil_btn");
 	let popSection = document.getElementById("editintro");
